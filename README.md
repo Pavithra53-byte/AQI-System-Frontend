@@ -23,25 +23,6 @@ This interface is designed for:
 
 ---
 
-##  Monitored Locations
-
-The dashboard currently supports 12 hyper-local monitoring zones:
-
-- AIIMS Delhi  
-- Anand Vihar  
-- Chandni Chowk  
-- Connaught Place  
-- Dwarka  
-- Faridabad  
-- Ghaziabad  
-- Greater Noida  
-- Gurugram  
-- Lodhi Road  
-- Noida Sector 62  
-- Vasant Kunj  
-
----
-
 ## Tech Stack
 
 ### Frontend
