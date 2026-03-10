@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 220 25% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 12%;
+
+    --primary: 215 50% 23%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 215 25% 90%;
+    --secondary-foreground: 215 50% 23%;
+
+    --muted: 220 15% 94%;
+    --muted-foreground: 220 10% 46%;
+
+    --accent: 215 25% 90%;
+    --accent-foreground: 215 50% 23%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 215 50% 23%;
+
+    --radius: 0.375rem;
+
+    /* AQI category colors */
+    --aqi-good: 142 60% 40%;
+    --aqi-moderate: 45 85% 50%;
+    --aqi-poor: 25 90% 52%;
+    --aqi-very-poor: 0 72% 51%;
+    --aqi-severe: 0 80% 38%;
+
+    /* Dashboard specific */
+    --panel-bg: 0 0% 100%;
+    --panel-border: 220 15% 90%;
+    --status-active: 142 60% 40%;
+    --status-standby: 45 85% 50%;
+    --topbar-bg: 215 50% 18%;
+    --topbar-foreground: 210 40% 98%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  code, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .panel {
+    @apply bg-panel rounded-md border border-panel-border shadow-sm;
+  }
+
+  .aqi-badge-good {
+    @apply bg-aqi-good/15 text-aqi-good border border-aqi-good/30;
+  }
+  .aqi-badge-moderate {
+    @apply bg-aqi-moderate/15 text-aqi-moderate border border-aqi-moderate/30;
+  }
+  .aqi-badge-poor {
+    @apply bg-aqi-poor/15 text-aqi-poor border border-aqi-poor/30;
+  }
+  .aqi-badge-very-poor {
+    @apply bg-aqi-very-poor/15 text-aqi-very-poor border border-aqi-very-poor/30;
+  }
+  .aqi-badge-severe {
+    @apply bg-aqi-severe/15 text-aqi-severe border border-aqi-severe/30;
+  }
+}
